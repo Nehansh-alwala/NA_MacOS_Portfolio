@@ -1,4 +1,4 @@
-import { Weight } from 'lucide-react'
+//import { weight } from 'lucide-react'
 import gsap from 'gsap'
 import React from 'react'
 import { useGSAP } from '@gsap/react'
