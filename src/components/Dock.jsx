@@ -7,7 +7,7 @@ import { useWindowStore } from '../store'
 
 
 const Dock = () => {
-    const {openWindow,closeWindow, windows}=useWindowStore();
+   const {openWindow,closeWindow, windows}=useWindowStore();
     const dockRef = React.useRef(null)
 
     useGSAP(() => {
@@ -96,4 +96,4 @@ const Dock = () => {
     );
 }
 
-export default Dock
+export default Dock;

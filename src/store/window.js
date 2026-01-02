@@ -1,5 +1,6 @@
 import { create } from "zustand";
-import { immer } from "immer";
+
+import { immer } from "zustand/middleware/immer";
 import { INITIAL_Z_INDEX, WINDOW_CONFIG } from "../constants";
 
 const useWindowStore = create(
@@ -8,7 +9,7 @@ const useWindowStore = create(
         nextZIndex: INITIAL_Z_INDEX + 1,
 
         openWindow: (windowKey, data = null) => 
-            set((state) => {
+            set((state) => { 
                 const win=state.windows[windowKey];
                 win.isOpen=true;
                 win.zIndex=state.nextZIndex;

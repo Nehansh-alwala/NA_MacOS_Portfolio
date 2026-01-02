@@ -31,7 +31,7 @@ const setupTextHover = (container, type) => {
         return gsap.to(letter, {
             fontVariationSettings:`'wght' ${weight}`,
             duration,
-            ease:"power2.out",
+            ease:"power4.out",
         });
     };
     const handleMouseMove = (e) => {
@@ -80,14 +80,15 @@ const Welcome = () => {
         <p ref={subtitleRef}>
             {renderText(
                 "Hey, I'm Nehansh Alwala! Welcome to my", 
-                'text-3xl font-georama', 
+                'text-5xl font-georama', 
                 100)}
         </p>
         <h1 ref={titleRef} className='mt-7'>
-            {renderText("Portfolio", "text-9xl italic font-georama")}
+            {renderText("Portfolio", "text-9xl font-georama" )}
         </h1>
         <div className="small-screen">
-            <p>This Portfolio is responsive and built with React</p>
+            
+            <p>This Portfolio is responsive for desktop/tablet screens </p>
         </div>
     </section>
   )
